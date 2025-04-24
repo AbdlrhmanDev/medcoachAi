@@ -7,62 +7,51 @@ import { PricingFeature, PricingPlan } from '@/interfaces/pricing';
 
 const pricingPlans: PricingPlan[] = [
   {
-    name: "Basic",
-    price: "$29",
-    description: "Perfect for startups and small practices",
+    name: 'Basic',
+    price: '$99',
+    description: 'Perfect for small practices just getting started with AI.',
     features: [
-      { name: "Up to 100 patient records", basic: true, professional: true, enterprise: true },
-      { name: "Basic appointment scheduling", basic: true, professional: true, enterprise: true },
-      { name: "Electronic health records", basic: true, professional: true, enterprise: true },
-      { name: "Prescription management", basic: true, professional: true, enterprise: true },
-      { name: "Email support", basic: true, professional: true, enterprise: true },
-      { name: "Advanced analytics", basic: false, professional: true, enterprise: true },
-      { name: "Custom branding", basic: false, professional: true, enterprise: true },
-      { name: "API access", basic: false, professional: false, enterprise: true },
-      { name: "24/7 phone support", basic: false, professional: false, enterprise: true },
-      { name: "HIPAA compliance", basic: false, professional: true, enterprise: true }
+      { name: 'Basic AI Chat Support', basic: true, professional: true, enterprise: true },
+      { name: 'Standard Response Time', basic: true, professional: true, enterprise: true },
+      { name: 'Basic Analytics', basic: true, professional: true, enterprise: true },
+      { name: 'Email Support', basic: true, professional: true, enterprise: true },
+      { name: 'Up to 5 Users', basic: true, professional: false, enterprise: false },
+      { name: 'Basic Training', basic: true, professional: false, enterprise: false },
     ],
-    cta: "Start Basic",
-    mostPopular: false
+    cta: 'Start Free Trial',
   },
   {
-    name: "Professional",
-    price: "$99",
-    description: "Ideal for growing medical practices",
+    name: 'Professional',
+    price: '$299',
+    description: 'Ideal for growing practices ready to scale with AI.',
+    mostPopular: true,
     features: [
-      { name: "Up to 1000 patient records", basic: false, professional: true, enterprise: true },
-      { name: "Advanced appointment scheduling", basic: false, professional: true, enterprise: true },
-      { name: "Electronic health records", basic: true, professional: true, enterprise: true },
-      { name: "Prescription management", basic: true, professional: true, enterprise: true },
-      { name: "Priority email support", basic: false, professional: true, enterprise: true },
-      { name: "Advanced analytics", basic: false, professional: true, enterprise: true },
-      { name: "Custom branding", basic: false, professional: true, enterprise: true },
-      { name: "API access", basic: false, professional: false, enterprise: true },
-      { name: "24/7 phone support", basic: false, professional: false, enterprise: true },
-      { name: "HIPAA compliance", basic: false, professional: true, enterprise: true }
+      { name: 'Advanced AI Chat Support', basic: false, professional: true, enterprise: true },
+      { name: 'Priority Response Time', basic: false, professional: true, enterprise: true },
+      { name: 'Advanced Analytics', basic: false, professional: true, enterprise: true },
+      { name: 'Priority Email Support', basic: false, professional: true, enterprise: true },
+      { name: 'Up to 20 Users', basic: false, professional: true, enterprise: false },
+      { name: 'Advanced Training', basic: false, professional: true, enterprise: false },
+      { name: 'Custom Workflows', basic: false, professional: true, enterprise: true },
     ],
-    cta: "Start Professional",
-    mostPopular: true
+    cta: 'Start Free Trial',
   },
   {
-    name: "Enterprise",
-    price: "$299",
-    description: "For large healthcare organizations",
+    name: 'Enterprise',
+    price: 'Custom',
+    description: 'For large organizations requiring maximum AI capabilities.',
     features: [
-      { name: "Unlimited patient records", basic: false, professional: false, enterprise: true },
-      { name: "Advanced appointment scheduling", basic: false, professional: true, enterprise: true },
-      { name: "Electronic health records", basic: true, professional: true, enterprise: true },
-      { name: "Prescription management", basic: true, professional: true, enterprise: true },
-      { name: "24/7 priority support", basic: false, professional: false, enterprise: true },
-      { name: "Advanced analytics", basic: false, professional: true, enterprise: true },
-      { name: "Custom branding", basic: false, professional: true, enterprise: true },
-      { name: "API access", basic: false, professional: false, enterprise: true },
-      { name: "24/7 phone support", basic: false, professional: false, enterprise: true },
-      { name: "HIPAA compliance", basic: false, professional: true, enterprise: true }
+      { name: 'Premium AI Chat Support', basic: false, professional: false, enterprise: true },
+      { name: '24/7 Priority Response', basic: false, professional: false, enterprise: true },
+      { name: 'Enterprise Analytics', basic: false, professional: false, enterprise: true },
+      { name: 'Dedicated Support Team', basic: false, professional: false, enterprise: true },
+      { name: 'Unlimited Users', basic: false, professional: false, enterprise: true },
+      { name: 'Custom Training Program', basic: false, professional: false, enterprise: true },
+      { name: 'Advanced Customization', basic: false, professional: false, enterprise: true },
+      { name: 'API Access', basic: false, professional: false, enterprise: true },
     ],
-    cta: "Contact Sales",
-    mostPopular: false
-  }
+    cta: 'Contact Sales',
+  },
 ];
 
 export default function PricingPage() {
