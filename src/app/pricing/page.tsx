@@ -3,54 +3,66 @@
 import PricingSection from '@/components/sections/PricingSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import ROICalculator from '@/components/sections/ROICalculator';
+import { PricingFeature, PricingPlan } from '@/interfaces/pricing';
 
-const pricingPlans = [
+const pricingPlans: PricingPlan[] = [
   {
-    name: 'Basic',
-    price: '£49',
-    description: 'Essential PLAB 2 preparation resources for individual study.',
+    name: "Basic",
+    price: "$29",
+    description: "Perfect for startups and small practices",
     features: [
-      { name: 'Access to basic study materials', included: true },
-      { name: 'Practice questions bank', included: true },
-      { name: 'Basic performance analytics', included: true },
-      { name: 'Community forum access', included: true },
-      { name: 'Email support', included: false },
-      { name: 'Live mock sessions', included: false },
-      { name: 'Personal mentor', included: false },
+      { name: "Up to 100 patient records", basic: true, professional: true, enterprise: true },
+      { name: "Basic appointment scheduling", basic: true, professional: true, enterprise: true },
+      { name: "Electronic health records", basic: true, professional: true, enterprise: true },
+      { name: "Prescription management", basic: true, professional: true, enterprise: true },
+      { name: "Email support", basic: true, professional: true, enterprise: true },
+      { name: "Advanced analytics", basic: false, professional: true, enterprise: true },
+      { name: "Custom branding", basic: false, professional: true, enterprise: true },
+      { name: "API access", basic: false, professional: false, enterprise: true },
+      { name: "24/7 phone support", basic: false, professional: false, enterprise: true },
+      { name: "HIPAA compliance", basic: false, professional: true, enterprise: true }
     ],
-    cta: 'Get started',
+    cta: "Start Basic",
+    mostPopular: false
   },
   {
-    name: 'Professional',
-    price: '£99',
-    description: 'Comprehensive preparation with additional support features.',
-    mostPopular: true,
+    name: "Professional",
+    price: "$99",
+    description: "Ideal for growing medical practices",
     features: [
-      { name: 'Access to all study materials', included: true },
-      { name: 'Extended question bank', included: true },
-      { name: 'Advanced performance analytics', included: true },
-      { name: 'Community forum access', included: true },
-      { name: 'Priority email support', included: true },
-      { name: '2 Live mock sessions', included: true },
-      { name: 'Personal mentor', included: false },
+      { name: "Up to 1000 patient records", basic: false, professional: true, enterprise: true },
+      { name: "Advanced appointment scheduling", basic: false, professional: true, enterprise: true },
+      { name: "Electronic health records", basic: true, professional: true, enterprise: true },
+      { name: "Prescription management", basic: true, professional: true, enterprise: true },
+      { name: "Priority email support", basic: false, professional: true, enterprise: true },
+      { name: "Advanced analytics", basic: false, professional: true, enterprise: true },
+      { name: "Custom branding", basic: false, professional: true, enterprise: true },
+      { name: "API access", basic: false, professional: false, enterprise: true },
+      { name: "24/7 phone support", basic: false, professional: false, enterprise: true },
+      { name: "HIPAA compliance", basic: false, professional: true, enterprise: true }
     ],
-    cta: 'Start free trial',
+    cta: "Start Professional",
+    mostPopular: true
   },
   {
-    name: 'Enterprise',
-    price: 'Custom',
-    description: 'Tailored solutions for institutions and large groups.',
+    name: "Enterprise",
+    price: "$299",
+    description: "For large healthcare organizations",
     features: [
-      { name: 'All Professional features', included: true },
-      { name: 'Custom content integration', included: true },
-      { name: 'Dedicated support team', included: true },
-      { name: 'Progress tracking dashboard', included: true },
-      { name: 'Unlimited mock sessions', included: true },
-      { name: 'Personal mentor assigned', included: true },
-      { name: 'Custom reporting', included: true },
+      { name: "Unlimited patient records", basic: false, professional: false, enterprise: true },
+      { name: "Advanced appointment scheduling", basic: false, professional: true, enterprise: true },
+      { name: "Electronic health records", basic: true, professional: true, enterprise: true },
+      { name: "Prescription management", basic: true, professional: true, enterprise: true },
+      { name: "24/7 priority support", basic: false, professional: false, enterprise: true },
+      { name: "Advanced analytics", basic: false, professional: true, enterprise: true },
+      { name: "Custom branding", basic: false, professional: true, enterprise: true },
+      { name: "API access", basic: false, professional: false, enterprise: true },
+      { name: "24/7 phone support", basic: false, professional: false, enterprise: true },
+      { name: "HIPAA compliance", basic: false, professional: true, enterprise: true }
     ],
-    cta: 'Contact sales',
-  },
+    cta: "Contact Sales",
+    mostPopular: false
+  }
 ];
 
 export default function PricingPage() {
